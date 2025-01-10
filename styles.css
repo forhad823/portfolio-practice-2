@@ -4,6 +4,7 @@
 * {
   margin: 1px;
   padding: 0px;
+  box-sizing: border-box;
   /* box-sizing: border-box; Ensures consistent box model */
 }
 
@@ -101,25 +102,27 @@
 
 .lm-link {
   margin-top: 24px;
+  color: black;
   font-weight: bold;
   font-size: 16px;
   opacity: 100%;
   text-decoration: underline;
+  cursor: pointer;
+  display: block; /*anchor tag by default inline */
 }
 
 main,
 footer {
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 60px auto;
   text-align: center;
-}
-main {
+  /* padding: 0 150px 0; */
   background-color: rgb(245, 245, 245);
 }
 /* ......Shared styles end......... */
 
 .why-dev-container {
-  padding: 80px 97px;
+  padding: 80px 97px 60px;
 }
 
 /* ......why-box styles..............*/
@@ -152,4 +155,120 @@ main {
 .img-box {
   width: 274px;
   height: 240px;
+}
+
+main .inspiration {
+  padding-bottom: 151px;
+}
+
+/* ........current turget skill box........ */
+.current-target {
+  max-width: 1140px;
+  padding-bottom: 151px;
+}
+
+.current-target-skills-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 0 150px 0;
+  gap: 10px;
+}
+
+.ct-skill-box-1 {
+  padding: 40px;
+  background-color: #fff6f4;
+  border: 1px solid #fff6f4;
+  border-radius: 20px;
+}
+.ct-skill-box-2 {
+  padding: 40px;
+  background-color: #d7e2f8;
+  border: 1px solid #d7e2f8;
+  border-radius: 20px;
+}
+.ct-skill-box-3 {
+  padding: 40px;
+  background-color: #fffdf2;
+  border: 1px solid #fffdf2;
+  border-radius: 20px;
+}
+
+.next-target-skills {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 150px 80px;
+  gap: 55px;
+}
+
+.next-skill-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  border: 1px solid rgb(190, 190, 190);
+}
+.support {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(/assets/handshake.jpg);
+  background-size: cover; /* Ensures the image covers the full element */
+  background-position: center; /* Centers the image within the element */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+  height: 313px;
+  display: flex; /* Enables flexbox layout for centering content */
+  flex-direction: column;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  color: white; /* Optional: Makes the text color stand out */
+  text-align: center; /* Ensures text is centered */
+  border-radius: 16px;
+  padding: 64px 48px;
+}
+/* .submit-btn {
+  padding: 57px 120px;
+}
+.suggestion {
+  width: 548px;
+  height: 57px;
+} */
+
+/* chat gpt */
+.feedback-block {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Align items vertically in the center */
+  gap: 16px; /* Add spacing between the input and button */
+  padding-top: 20px;
+}
+
+.suggestion {
+  width: 54px; /* Matches the provided width */
+  height: 57px; /* Matches the provided height */
+  padding: 0 12px; /* Adds padding inside the input for better text spacing */
+  font-size: 16px; /* Ensures readable text */
+  border: 1px solid #ccc; /* Adds a subtle border */
+  border-radius: 8px; /* Makes corners slightly rounded */
+  box-sizing: border-box; /* Ensures padding doesn't overflow the width/height */
+}
+
+.submit-btn {
+  padding: 16px 32px; /* Adjusts padding for a better button size */
+  background-color: #007bff; /* Adds a primary background color */
+  color: white; /* Makes text stand out */
+  font-size: 16px; /* Ensures text is legible */
+  font-weight: bold; /* Makes button text bold */
+  border: none; /* Removes default borders */
+  border-radius: 8px; /* Matches the rounded input */
+  cursor: pointer; /* Adds a pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darkens the button color on hover */
 }
